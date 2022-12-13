@@ -24,3 +24,21 @@
   $name = $wh->getName();
   $avatar = $wh->getAvatar();
 ```
+> Set Message
+```php
+  $wh = new Webhook('your_webhook_link');
+  $wh->setMessage('hello world');
+```
+> Embed
+```php
+  $wh = new Webhook('your_webhook_link');
+  //You must enable using embed on settings
+  //Set embed content: title, type, description, field.v.v
+  $wh->setEmbed('title', 'hello world');
+  $wh->setEmbed('image', 'your_image_path');
+```
+> Send a message
+```php
+  $wh = new Webhook('your_webhook_link');
+  $wh->send();
+```
