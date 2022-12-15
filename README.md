@@ -72,3 +72,9 @@ $h->sendMessage();
   $wh = new WebhookApi('your_webhook_link');
   $wh->sendMessage();
 ```
+> Get A Request Info
+```php
+$wh = new WebhookApi('your_webhook_link');
+  $wh->sendMessage();
+$wh->getNetworkStatus() //return request array(uptime, downtime, httpstatus, domain_finding time, connect_time, total_time)
+$wh->getResponse() //return webhook request content
