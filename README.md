@@ -39,7 +39,15 @@
  //Set Embed Image
   $em->setImage('your_image_link');
  //Set Embed Footer
-  $em->setFooter();
+  $em->setFooter([
+    'text' => 'That Is Footer Text!',
+    'icon_url' => 'your_icon_url'
+   ]);
+   //Set Embed Timestamp
+   $em->setTimeStamp(time());
+   //Set Embed Field
+   $em->setField([
+   '
 ```
 > Send a message
 ```php
