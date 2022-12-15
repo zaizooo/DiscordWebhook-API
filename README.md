@@ -3,22 +3,18 @@
 # Tutorial\Example
  > Register Class
 ```php
-  $wh = new Webhook('your_webhook_link');
+  $wh = new WebhookApi('your_webhook_link');
 ```
-> Settings
-```php
-  $wh = new Webhook('your_webhook_link');
-  $wh->settings(['setting_key', 'setting_value']);
-```
+
 > Set Avatar/name
 ```php
-  $wh = new Webhook('your_webhook_link');
+  $wh = new WebhookApi('your_webhook_link');
   $wh->setAvatar('image_url');
   $wh->setName('Test!');
 ```
 > Get Avatar/name
 ```php
-  $wh = new Webhook('your_webhook_link');
+  $wh = new WebhookApi('your_webhook_link');
   $wh->setAvatar('image_url');
   $wh->setName('Test!');
   $name = $wh->getName();
@@ -26,16 +22,24 @@
 ```
 > Set Message
 ```php
-  $wh = new Webhook('your_webhook_link');
+  $wh = new WebhookApi('your_webhook_link');
   $wh->setMessage('hello world');
 ```
-> Embed
+> EmbedManager
 ```php
-  $wh = new Webhook('your_webhook_link');
-  //You must enable using embed on settings
-  //Set embed content: title, type, description, field.v.v
-  $wh->setEmbed('title', 'hello world');
-  $wh->setEmbed('image', 'your_image_path');
+  $wh = new WebhookApi('your_webhook_link');
+  //Get Embed Manager
+  $em = $wh->getEmbedManager();
+  //Set Embed Title
+  $em->setTitle('That Is Title');
+  //Set Embed Type
+  $em->setType('rich');
+  //Set Embed Description
+  $em->setDescription('That Is Description');
+ //Set Embed Image
+  $em->setImage('your_image_link');
+ //Set Embed Footer
+  $em->setFooter();
 ```
 > Send a message
 ```php
