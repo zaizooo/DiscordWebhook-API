@@ -60,6 +60,6 @@
 ```
 > Send a message
 ```php
-  $wh = new Webhook('your_webhook_link');
-  $wh->send();
+  $wh = new WebhookApi('your_webhook_link');
+  $wh->sendMessage();
 ```
