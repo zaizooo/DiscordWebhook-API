@@ -27,36 +27,45 @@
 ```
 > EmbedManager
 ```php
-  $wh = new WebhookApi('your_webhook_link');
-  //Get Embed Manager
-  $em = $wh->getEmbedManager();
-  //Set Embed Title
-  $em->setTitle('That Is Title');
-  //Set Embed Type
-  $em->setType('rich');
-  //Set Embed Description
-  $em->setDescription('That Is Description');
- //Set Embed Image
-  $em->setImage('your_image_link');
- //Set Embed Footer
-  $em->setFooter([
-    'text' => 'That Is Footer Text!',
-    'icon_url' => 'your_icon_url'
-   ]);
-   //Set Embed Timestamp
-   $em->setTimeStamp(time());
-   //Set Embed Field(you can manually add multi field by repeating use setField function)
-   $em->setField([
-   'title' => 'That Is Field Title!',
-   'value' => 'Hello',
-   'inline' => true
-   ]):
-   
-  //Set Embed Author
-   $em->setAuthor([
-  'name' => '@zaizooo',
-  'url' => 'github.com/zaizooo'
-  ]):
+  $h = new WebhookApi('your_webhook_link');
+  
+$h->getEmbedManager()->setTitle("That Is Embed Title");
+$h->getEmbedManager()->setType("rich");
+$h->getEmbedManager()->setDescription("That Is Embed Description");
+
+$h->getEmbedManager()->setColor("ffffff");
+$h->getEmbedManager()->setField([
+    "name" => "Field2",
+    "value" => "@zaizooo",
+    "inline" => false,
+]);
+$h->getEmbedManager()->setField([
+    "name" => "Field1",
+    "value" => "@zaizooo",
+    "inline" => false,
+]);
+$h->getEmbedManager()->setField([
+    "name" => "Field1",
+    "value" => "@zaizooo",
+    "inline" => false,
+]);
+$h->getEmbedManager()->setImage(
+    "https://i.pinimg.com/236x/ca/3a/8c/ca3a8ca2b8551d5ac314ef108a3fcb6f.jpg"
+);
+$h->getEmbedManager()->setAuthor([
+    "name" => "Saidua",
+    "url" =>
+        "https://i.pinimg.com/236x/ca/3a/8c/ca3a8ca2b8551d5ac314ef108a3fcb6f.jpg",
+]);
+$h->getEmbedManager()->setFooter([
+    "text" => "Awesome?",
+    "icon_url" =>
+        "https://2sao.vietnamnetjsc.vn/images/2021/08/09/10/29/jack-2.jpeg",
+]);
+$h->getEmbedManager()->setTimeStamp(time());
+
+//while(true){
+$h->sendMessage();
 ```
 > Send a message
 ```php
