@@ -45,9 +45,18 @@
    ]);
    //Set Embed Timestamp
    $em->setTimeStamp(time());
-   //Set Embed Field
+   //Set Embed Field(you can manually add multi field by repeating use setField function)
    $em->setField([
-   '
+   'title' => 'That Is Field Title!',
+   'value' => 'Hello',
+   'inline' => true
+   ]):
+   
+  //Set Embed Author
+   $em->setAuthor([
+  'name' => '@zaizooo',
+  'url' => 'github.com/zaizooo'
+  ]):
 ```
 > Send a message
 ```php
